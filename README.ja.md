@@ -6,16 +6,13 @@ qore の Android / iOS SDK です。コア v1.0.0 を使用します。
 
 ## Android · Gradle
 
-settings.gradle.kts の dependencyResolutionManagement.repositories に Maven リポジトリを追加し、アプリモジュールに依存関係を追加します。
+`settings.gradle.kts` の `dependencyResolutionManagement.repositories` に `mavenCentral()` を追加します。
 
 ```kotlin
-maven {
-    url = uri("https://raw.githubusercontent.com/firesh/qcore-mobile/maven/")
-    content { includeGroup("io.github.firesh") }
-}
+mavenCentral()
 ```
 
-Add this to the app module's dependencies:
+アプリモジュールに依存関係を追加します。
 
 ```kotlin
 implementation("io.github.firesh:qcore-mobile:1.0.0")

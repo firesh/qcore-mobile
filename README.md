@@ -6,16 +6,13 @@ English · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
 
 ## Android · Gradle
 
-Add the public Maven repository to `dependencyResolutionManagement.repositories` in `settings.gradle.kts`:
+Add `mavenCentral()` to `dependencyResolutionManagement.repositories` in `settings.gradle.kts`.
 
 ```kotlin
-maven {
-    url = uri("https://raw.githubusercontent.com/firesh/qcore-mobile/maven/")
-    content { includeGroup("io.github.firesh") }
-}
+mavenCentral()
 ```
 
-Add this to the app module's dependencies:
+Add the dependency in the app module.
 
 ```kotlin
 implementation("io.github.firesh:qcore-mobile:1.0.0")

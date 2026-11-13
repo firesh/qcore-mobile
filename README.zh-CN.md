@@ -6,16 +6,13 @@ qore 的 Android 和 iOS SDK，使用核心 v1.0.0。
 
 ## Android · Gradle
 
-在 settings.gradle.kts 的 dependencyResolutionManagement.repositories 中加入 Maven 仓库，然后在 App 模块中添加依赖。
+在 `settings.gradle.kts` 的 `dependencyResolutionManagement.repositories` 中加入 `mavenCentral()`。
 
 ```kotlin
-maven {
-    url = uri("https://raw.githubusercontent.com/firesh/qcore-mobile/maven/")
-    content { includeGroup("io.github.firesh") }
-}
+mavenCentral()
 ```
 
-Add this to the app module's dependencies:
+在 App 模块中添加依赖。
 
 ```kotlin
 implementation("io.github.firesh:qcore-mobile:1.0.0")
