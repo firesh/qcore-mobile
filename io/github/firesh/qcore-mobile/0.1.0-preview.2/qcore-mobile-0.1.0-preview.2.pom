@@ -1,0 +1,11 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.firesh</groupId>
+  <artifactId>qcore-mobile</artifactId>
+  <version>0.1.0-preview.2</version>
+  <packaging>aar</packaging>
+  <name>qcore-mobile</name>
+  <description>Android SDK for the qore QR code reader</description>
+  <url>https://github.com/firesh/qcore-mobile</url>
+  <licenses><license><name>MIT</name><url>https://opensource.org/license/mit</url></license></licenses>
+</project>
