@@ -2,12 +2,32 @@
 
 Preview Android and iOS bindings for the [qore QR decoder](https://github.com/firesh/qcore), pinned to core v1.0.0.
 
-## Install the preview
+English · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
 
-Download the archives and checksums from [Releases](https://github.com/firesh/qcore-mobile/releases).
+## Android · Gradle
 
-- **Android:** add `qcore.aar` to `app/libs/` and add `implementation(files("libs/qcore.aar"))` to your app's Gradle dependencies. The preview targets API 23+ and includes arm64-v8a and x86_64. See the [Kotlin call site](example/DecodeGray.kt).
-- **iOS:** unzip `QCore.xcframework.zip` and add `QCore.xcframework` to your app target in Xcode. It includes iOS arm64 and arm64/x86_64 simulator slices and targets iOS 15+. See the [Swift call site](example/DecodeGray.swift).
+Add the public Maven repository to `dependencyResolutionManagement.repositories` in `settings.gradle.kts`:
+
+```kotlin
+maven {
+    url = uri("https://raw.githubusercontent.com/firesh/qcore-mobile/maven/")
+    content { includeGroup("io.github.firesh") }
+}
+```
+
+Add this to the app module's dependencies:
+
+```kotlin
+implementation("io.github.firesh:qcore-mobile:0.1.0-preview.2")
+```
+
+Android API 23+. The AAR includes `armeabi-v7a`, `arm64-v8a`, and `x86_64`. See the [Kotlin example](example/DecodeGray.kt).
+
+## iOS · Swift Package Manager
+
+In Xcode, choose **File → Add Package Dependencies**, enter `https://github.com/firesh/qcore-mobile`, and select **Exact Version** `0.1.0-preview.2`. Add the **QCore** product to your app target. Import `QCore` as in the [Swift example](example/DecodeGray.swift).
+
+Requires iOS 15+. The package includes arm64 for devices and arm64/x86_64 for simulators. Direct downloads are available from [GitHub Releases](https://github.com/firesh/qcore-mobile/releases).
 
 ## Frame and result contract
 
@@ -27,10 +47,10 @@ Install Go 1.23.6, the Android SDK and NDK, and Xcode for iOS. Install both `gom
 ```sh
 go test ./...
 mkdir -p dist
-gomobile bind -target=android/arm64,android/amd64 -androidapi=23 -javapkg io.github.firesh.qcore -o dist/qcore.aar ./mobile
+gomobile bind -target=android/arm,android/arm64,android/amd64 -androidapi=23 -javapkg io.github.firesh.qcore -o dist/qcore.aar ./mobile
 gomobile bind -target=ios,iossimulator -iosversion=15.0 -prefix QCore -o dist/QCore.xcframework ./mobile
 ```
 
-This preview ships binary artifacts and frame-level examples. Full camera sample apps, device latency measurements, and Maven/SwiftPM distribution are pending.
+This preview ships binary artifacts and frame-level examples. Full camera sample apps and device latency measurements are pending.
 
 [MIT License](LICENSE)
