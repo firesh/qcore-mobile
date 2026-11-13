@@ -2,7 +2,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
 
-qore の Android / iOS SDK プレビューです。コア v1.0.0 を使用します。
+qore の Android / iOS SDK です。コア v1.0.0 を使用します。
 
 ## Android · Gradle
 
@@ -18,14 +18,14 @@ maven {
 Add this to the app module's dependencies:
 
 ```kotlin
-implementation("io.github.firesh:qcore-mobile:0.1.0-preview.2")
+implementation("io.github.firesh:qcore-mobile:1.0.0")
 ```
 
 Android API 23+ · `armeabi-v7a` · `arm64-v8a` · `x86_64` · [Kotlin](example/DecodeGray.kt)
 
 ## iOS · Swift Package Manager
 
-Xcode の **File → Add Package Dependencies** でリポジトリ URL を入力し、**Exact Version** `0.1.0-preview.2` を指定します。**QCore** をアプリターゲットに追加します。
+Xcode の **File → Add Package Dependencies** でリポジトリ URL を入力し、**Exact Version** `1.0.0` を指定します。**QCore** をアプリターゲットに追加します。
 
 `https://github.com/firesh/qcore-mobile`
 
