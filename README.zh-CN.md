@@ -2,7 +2,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
 
-qore 的 Android 和 iOS SDK，使用核心 v1.0.0。
+qore 的 Android 和 iOS SDK，使用核心 v1.0.1。
 
 ## Android · Gradle
 
@@ -15,14 +15,14 @@ mavenCentral()
 在 App 模块中添加依赖。
 
 ```kotlin
-implementation("io.github.firesh:qcore-mobile:1.0.0")
+implementation("io.github.firesh:qcore-mobile:1.0.1")
 ```
 
 Android API 23+ · `armeabi-v7a` · `arm64-v8a` · `x86_64` · [Kotlin](example/DecodeGray.kt)
 
 ## iOS · Swift Package Manager
 
-在 Xcode 选择 **File → Add Package Dependencies**，输入仓库地址，选择 **Exact Version** `1.0.0`，将 **QCore** 产品添加到 App target。
+在 Xcode 选择 **File → Add Package Dependencies**，输入仓库地址，选择 **Exact Version** `1.0.1`，将 **QCore** 产品添加到 App target。
 
 `https://github.com/firesh/qcore-mobile`
 

@@ -1,6 +1,6 @@
 # qcore-mobile
 
-Android and iOS bindings for the [qore QR decoder](https://github.com/firesh/qcore), pinned to core v1.0.0.
+Android and iOS bindings for the [qore QR decoder](https://github.com/firesh/qcore), pinned to core v1.0.1.
 
 English · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
 
@@ -15,14 +15,14 @@ mavenCentral()
 Add the dependency in the app module.
 
 ```kotlin
-implementation("io.github.firesh:qcore-mobile:1.0.0")
+implementation("io.github.firesh:qcore-mobile:1.0.1")
 ```
 
 Android API 23+. The AAR includes `armeabi-v7a`, `arm64-v8a`, and `x86_64`. See the [Kotlin example](example/DecodeGray.kt).
 
 ## iOS · Swift Package Manager
 
-In Xcode, choose **File → Add Package Dependencies**, enter `https://github.com/firesh/qcore-mobile`, and select **Exact Version** `1.0.0`. Add the **QCore** product to your app target. Import `QCore` as in the [Swift example](example/DecodeGray.swift).
+In Xcode, choose **File → Add Package Dependencies**, enter `https://github.com/firesh/qcore-mobile`, and select **Exact Version** `1.0.1`. Add the **QCore** product to your app target. Import `QCore` as in the [Swift example](example/DecodeGray.swift).
 
 Requires iOS 15+. The package includes arm64 for devices and arm64/x86_64 for simulators. Direct downloads are available from [GitHub Releases](https://github.com/firesh/qcore-mobile/releases).
 
